@@ -1,0 +1,1 @@
+  learn cors and origin;
