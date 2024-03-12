@@ -1,5 +1,5 @@
 export async function fetchdataplaces(){
-    const response = await fetch('https://placepicker-backend-sahil-ganis-projects.vercel.app/places');
+    const response = await fetch('http://localhost:3000/places');
     const responsedata = await response.json();
     if (!response.ok) {
       throw new Error('failed to fetch the data');
