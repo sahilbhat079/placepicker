@@ -1,9 +1,17 @@
 import fs from 'node:fs/promises';
 import bodyParser from 'body-parser';
 import express from 'express';
+import cors from "cors";
+ 
+const corsconfig={
+  origin:"*",
+  credential:true,
+  methods:['GET','PUT']
+}
 
 const app = express();
-
+app.options("",cors(corsconfig));
+app.use(cors(corsconfig));
 app.use(express.static('images'));
 app.use(bodyParser.json());
 
@@ -30,9 +38,9 @@ app.get('/places', async (req, res) => {
 });
 
 
-app.get("/",(req,res)=>{
-  res.send("hello world");
-  });
+// app.get("/",(req,res)=>{
+//   res.send("hello world");
+//   });
   
 
 app.get('/user-places', async (req, res) => {
