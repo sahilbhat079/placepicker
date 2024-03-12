@@ -1,5 +1,5 @@
 export async function fetchdataplaces(){
-    const response = await fetch('http://localhost:3000/places');
+    const response = await fetch('https://placepicker-backend-2xbl60eqm-sahil-ganis-projects.vercel.app/places');
     const responsedata = await response.json();
     if (!response.ok) {
       throw new Error('failed to fetch the data');
@@ -11,7 +11,7 @@ export async function fetchdataplaces(){
 
 
 export async function fetchuserplaces(){
-    const response = await fetch('http://localhost:3000/user-places');
+    const response = await fetch('https://placepicker-backend-2xbl60eqm-sahil-ganis-projects.vercel.app/user-places');
     const responsedata = await response.json();
     if (!response.ok) {
       throw new Error('failed to fetch the user places');
@@ -24,7 +24,7 @@ export async function fetchuserplaces(){
 
 export async function updateuserplaces(places){
   
-const response=await fetch('http://localhost:3000/user-places',
+const response=await fetch('https://placepicker-backend-2xbl60eqm-sahil-ganis-projects.vercel.app/user-places',
 {
 method:"PUT",
 body:JSON.stringify({places}),

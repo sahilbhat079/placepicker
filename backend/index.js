@@ -16,6 +16,11 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/",(req,res)=>{
+  res.send("hello world");
+  });
+  
+
 app.get('/places', async (req, res) => {
   const fileContent = await fs.readFile('./data/places.json');
 
