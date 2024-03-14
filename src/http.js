@@ -11,7 +11,7 @@ export async function fetchdataplaces(){
 
 
 export async function fetchuserplaces(){
-    const response = await fetch('https://placepic.vercel.app/api/user-places');
+    const response = await fetch('https://placepic-sahil-ganis-projects.vercel.app/api/user-places');
     const responsedata = await response.json();
     if (!response.ok) {
       throw new Error('failed to fetch the user places');
@@ -24,7 +24,7 @@ export async function fetchuserplaces(){
 
 export async function updateuserplaces(places){
   
-const response=await fetch('https://placepic.vercel.app/api/user-places',
+const response=await fetch('https://placepic-sahil-ganis-projects.vercel.app/api/user-places',
 {
 method:"PUT",
 body:JSON.stringify({places}),
